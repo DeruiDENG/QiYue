@@ -1,6 +1,7 @@
 env:
   browser: true
   es6: true
+  jest: true
 extends: ["eslint:recommended", "prettier", "prettier/@typescript-eslint", "plugin:react/recommended"]
 globals:
   Atomics: readonly
@@ -14,3 +15,6 @@ parserOptions:
 plugins: ["react", "@typescript-eslint/eslint-plugin"]
 rules: {}
 parser: "@typescript-eslint/parser"
+settings:
+  react:
+    version: "detect"
