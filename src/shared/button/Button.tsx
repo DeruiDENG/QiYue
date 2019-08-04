@@ -4,8 +4,8 @@ import "./button.scss";
 
 interface Props {
   displayText: React.ReactNode;
-  isSelected: boolean;
-  isDisabled: boolean;
+  isSelected?: boolean;
+  isDisabled?: boolean;
   onClick: () => void;
 }
 

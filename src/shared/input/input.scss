@@ -1,0 +1,10 @@
+.input-wrapper {
+  label {
+    display: flex;
+  }
+
+  input {
+    flex-grow: 1;
+    margin-left: 12px;
+  }
+}

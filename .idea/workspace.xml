@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea10346f-bd7d-4a6a-98a5-f6490473031c" name="Default Changelist" comment="Introduce eslint and prettier">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.yml" afterDir="false" />
+    <list default="true" id="ea10346f-bd7d-4a6a-98a5-f6490473031c" name="Default Changelist" comment="添加标题和主搜索栏">
+      <change afterPath="$PROJECT_DIR$/src/Panel/AdvancedSearchInputPanel.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Panel/PanelImage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Panel/panel-image-min.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Panel/panelForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Panel/panelImage.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/input/Input.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/input/input.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panel/Panel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/PanelContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="tsconfig.json" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -40,7 +52,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.0" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.eslintrc.yml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Panel" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -53,8 +65,16 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Projects\qiyue\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="ts.external.directory.path" value="C:\Projects\qiyue\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\qiyue\src\Panel" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\qiyue\src\Header" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -94,7 +114,8 @@
       <option name="presentableId" value="Default" />
       <updated>1564880974908</updated>
       <workItem from="1564880976199" duration="9000000" />
-      <workItem from="1564890501800" duration="819000" />
+      <workItem from="1564890501800" duration="946000" />
+      <workItem from="1564921649281" duration="9336000" />
     </task>
     <task id="LOCAL-00001" summary="Setup webpack project.">
       <created>1564884269299</created>
@@ -110,7 +131,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564889521903</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add redux, react-router">
+      <created>1564891577781</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1564891577781</updated>
+    </task>
+    <task id="LOCAL-00004" summary="添加标题和主搜索栏">
+      <created>1564926714605</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1564926714605</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +167,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Setup webpack project." />
     <MESSAGE value="Introduce eslint and prettier" />
-    <option name="LAST_COMMIT_MESSAGE" value="Introduce eslint and prettier" />
+    <MESSAGE value="Add redux, react-router" />
+    <MESSAGE value="添加标题和主搜索栏" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加标题和主搜索栏" />
   </component>
 </project>
