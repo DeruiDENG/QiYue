@@ -1,0 +1,21 @@
+button.button {
+  font-family: 仿宋 sans-serif;
+  padding: 4px 6px;
+  color: #D9BF05;
+  border: #D9BF05 1px solid;
+  background-color: transparent;
+  border-radius: 6px;
+  font-size: 18px;
+
+  &:hover {
+    color: white;
+    background-color: #D9BF05;
+    cursor: pointer;
+  }
+
+  &.is-selected {
+    color: white;
+    background-color: #D9BF05;
+    cursor: pointer;
+  }
+}

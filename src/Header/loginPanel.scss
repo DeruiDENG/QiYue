@@ -1,0 +1,25 @@
+.login-panel-wrapper {
+  .login-panel {
+    display: flex;
+
+    &__item {
+      margin-left: 6px;
+      margin-right: 6px;
+    }
+
+    &__link {
+      color: white;
+      text-decoration: none;
+
+      &--red {
+        color: red;
+      }
+    }
+  }
+
+  .copyright {
+    color: antiquewhite;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+}
