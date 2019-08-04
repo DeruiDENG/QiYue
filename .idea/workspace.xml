@@ -4,9 +4,7 @@
     <list default="true" id="ea10346f-bd7d-4a6a-98a5-f6490473031c" name="Default Changelist" comment="Introduce eslint and prettier">
       <change beforePath="$PROJECT_DIR$/.eslintrc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,6 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1564880974908</updated>
       <workItem from="1564880976199" duration="9000000" />
+      <workItem from="1564890501800" duration="819000" />
     </task>
     <task id="LOCAL-00001" summary="Setup webpack project.">
       <created>1564884269299</created>
@@ -122,7 +121,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
