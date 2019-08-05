@@ -3,7 +3,13 @@ env:
   es6: true
   jest: true
   node: true
-extends: ["eslint:recommended", "prettier", "prettier/@typescript-eslint", "plugin:react/recommended"]
+extends:
+  [
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "plugin:react/recommended",
+  ]
 globals:
   Atomics: readonly
   SharedArrayBuffer: readonly
@@ -14,7 +20,8 @@ parserOptions:
   sourceType: module
   project: "./tsconfig.json"
 plugins: ["react", "@typescript-eslint/eslint-plugin"]
-rules: {}
+rules:
+  "@typescript-eslint/explicit-function-return-type": 0
 parser: "@typescript-eslint/parser"
 settings:
   react:

@@ -1,21 +1,26 @@
 import React, { Fragment } from "react";
+import { Row, Col } from "antd";
 import "./App.scss";
-import Header from "./Header/Header";
 import MainPanel from "./main-panel/MainPanel";
 import PanelContainer from "./Panel/PanelContainer";
+import MainHeader from "./Header/MainHeader";
+import Footer from "./Footer/Footer";
 
 const App: React.FC = () => {
   return (
     <Fragment>
-      <div className="header-wrapper">
-        <Header />
-      </div>
-      <MainPanel />
+      <MainHeader />
       <div className="body-wrapper">
-        <div className="panel">
-          <PanelContainer />
-        </div>
+        <MainPanel />
+        <Row gutter={24} style={{marginBottom: "32px"}}>
+          <Col span={3}>
+            <PanelContainer />
+          </Col>
+          <Col span={21}>Some Content</Col>
+        </Row>
+        <Footer />
       </div>
+
     </Fragment>
   );
 };

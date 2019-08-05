@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea10346f-bd7d-4a6a-98a5-f6490473031c" name="Default Changelist" comment="">
+    <list default="true" id="ea10346f-bd7d-4a6a-98a5-f6490473031c" name="Default Changelist" comment="配置Ant Design">
+      <change afterPath="$PROJECT_DIR$/src/Footer/Footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Footer/footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Panel/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/MainHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panel/AdvancedSearchInputPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/AdvancedSearchInputPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panel/panelForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/panelForm.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panel/panelImage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/panelImage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main-panel/MainCategoryButtons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main-panel/MainCategoryButtons.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main-panel/MainPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main-panel/MainPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main-panel/mainPanel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main-panel/mainPanel.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/button/Button.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/button/button.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/input/CheckBox.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/input/Input.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/input/Select.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/input/input.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +73,7 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Projects\qiyue\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="ts.external.directory.path" value="C:\Projects\qiyue\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -108,7 +125,9 @@
       <workItem from="1564880976199" duration="9000000" />
       <workItem from="1564890501800" duration="946000" />
       <workItem from="1564921649281" duration="11934000" />
-      <workItem from="1565007012068" duration="1007000" />
+      <workItem from="1565007012068" duration="5933000" />
+      <workItem from="1565013748204" duration="1439000" />
+      <workItem from="1565015212584" duration="3325000" />
     </task>
     <task id="LOCAL-00001" summary="Setup webpack project.">
       <created>1564884269299</created>
@@ -145,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564931024970</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="配置Ant Design">
+      <created>1565008263072</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1565008263072</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +196,7 @@
     <MESSAGE value="Add redux, react-router" />
     <MESSAGE value="添加标题和主搜索栏" />
     <MESSAGE value="添加侧边栏基础实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加侧边栏基础实现" />
+    <MESSAGE value="配置Ant Design" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置Ant Design" />
   </component>
 </project>

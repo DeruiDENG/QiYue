@@ -2,7 +2,7 @@ import React from "react";
 import LoginPanel from "./LoginPanel";
 import './header.scss';
 
-function Header() {
+function MainHeader() {
   return (
     <header className="header">
       <div className="header__logo">中国契约</div>
@@ -12,4 +12,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default MainHeader;

@@ -1,0 +1,10 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  .copyright {
+    font-weight: bold;
+  }
+}
