@@ -1,18 +1,18 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: './src/index.tsx',
+  entry: "./src/index.tsx",
   output: {
-    filename: 'bundle.[hash].js',
-    path: __dirname + '/dist',
+    filename: "bundle.[hash].js",
+    path: __dirname + "/dist"
   },
 
-  devtool: 'source-map',
+  devtool: "source-map",
 
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json']
+    extensions: [".ts", ".tsx", ".js", ".json"]
   },
 
   module: {
@@ -20,25 +20,42 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          'style-loader', // creates style nodes from JS strings
-          'css-loader', // translates CSS into CommonJS
-          'sass-loader' // compiles Sass to CSS, using Node Sass by default
+          "style-loader", // creates style nodes from JS strings
+          "css-loader", // translates CSS into CommonJS
+          "sass-loader" // compiles Sass to CSS, using Node Sass by default
+        ]
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader" // translates CSS into CommonJS
+          },
+          {
+            loader: "less-loader", // compiles Less to CSS
+            options: {
+              javascriptEnabled: true
+            }
+          }
         ]
       },
       {
         test: /\.(svg|png|jpe?g|gif)$/,
         use: [
           {
-            loader: 'file-loader',
-            options: {},
-          },
-        ],
+            loader: "file-loader",
+            options: {}
+          }
+        ]
       },
       {
         test: /\.tsx?$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader"
           // options: {
           //   presets: ['@babel/preset-env']
           // }
@@ -48,14 +65,14 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: [path.join(__dirname, 'dist')],
+    contentBase: [path.join(__dirname, "dist")],
     compress: true,
     port: 9000
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: 'public/index.html'
+      template: "public/index.html"
     })
-  ],
+  ]
 };

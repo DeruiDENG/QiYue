@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea10346f-bd7d-4a6a-98a5-f6490473031c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/shared/input/CheckBox.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/input/Select.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Header/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panel/AdvancedSearchInputPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/AdvancedSearchInputPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panel/panelForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/panelForm.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main-panel/mainPanel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main-panel/mainPanel.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/input/input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/input/input.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,6 +108,7 @@
       <workItem from="1564880976199" duration="9000000" />
       <workItem from="1564890501800" duration="946000" />
       <workItem from="1564921649281" duration="11934000" />
+      <workItem from="1565007012068" duration="1007000" />
     </task>
     <task id="LOCAL-00001" summary="Setup webpack project.">
       <created>1564884269299</created>
