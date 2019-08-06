@@ -3,12 +3,12 @@ import { Form, Input, Checkbox, Select, Button } from "antd";
 import panelImage from "./panel-image-min.jpg";
 import PanelImage from "./PanelImage";
 import "./panelForm.scss";
-import {checkboxItemLayout, formItemLayout} from "./config";
+import { checkboxItemLayout, formItemLayout, formItemStyle } from "./config";
 
 type TimePeriod = "qing" | "ming" | "minguo" | "all";
 const { Option } = Select;
 
-export interface AdvancedSearchInput {
+export interface ByItemSearchInput {
   bookName: string;
   author: string;
   place: string;
@@ -16,8 +16,8 @@ export interface AdvancedSearchInput {
   connectDifferentType: boolean;
 }
 
-const AdvancedSearchInputPanel = () => {
-  const [input, setInput] = useState<AdvancedSearchInput>({
+const ByItemSearchInputPanel = () => {
+  const [input, setInput] = useState<ByItemSearchInput>({
     bookName: "",
     author: "",
     place: "",
@@ -32,7 +32,6 @@ const AdvancedSearchInputPanel = () => {
     { type: "minguo", displayName: "民国" }
   ];
 
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const setInputField = (fieldName: string) => (
     event: ChangeEvent<HTMLInputElement>
   ) => {
@@ -48,13 +47,13 @@ const AdvancedSearchInputPanel = () => {
     <div className="advanced-panel">
       <PanelImage url={panelImage} alt="高级搜索栏图片" />
       <Form {...formItemLayout}>
-        <Form.Item label="契名">
+        <Form.Item label="契名" style={formItemStyle}>
           <Input value={bookName} onChange={setInputField("bookName")} />
         </Form.Item>
-        <Form.Item label="立契人">
+        <Form.Item label="立契人" style={formItemStyle}>
           <Input value={author} onChange={setInputField("author")} />
         </Form.Item>
-        <Form.Item label="时代">
+        <Form.Item label="时代" style={formItemStyle}>
           <Select
             value={timePeriod}
             onSelect={value => {
@@ -73,10 +72,14 @@ const AdvancedSearchInputPanel = () => {
             })}
           </Select>
         </Form.Item>
-        <Form.Item label="地点">
+        <Form.Item label="地点" style={formItemStyle}>
           <Input value={place} onChange={setInputField("place")} />
         </Form.Item>
-        <Form.Item {...checkboxItemLayout} label="关联异体字">
+        <Form.Item
+          {...checkboxItemLayout}
+          label="关联异体字"
+          style={formItemStyle}
+        >
           <Checkbox
             checked={connectDifferentType}
             onChange={checkedValue => {
@@ -97,4 +100,4 @@ const AdvancedSearchInputPanel = () => {
   );
 };
 
-export default AdvancedSearchInputPanel;
+export default ByItemSearchInputPanel;

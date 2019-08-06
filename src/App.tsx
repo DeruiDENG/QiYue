@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Row, Col } from "antd";
+import { Col, Row } from "antd";
 import "./App.scss";
 import MainPanel from "./main-panel/MainPanel";
 import PanelContainer from "./Panel/PanelContainer";
@@ -12,7 +12,7 @@ const App: React.FC = () => {
       <MainHeader />
       <div className="body-wrapper">
         <MainPanel />
-        <Row gutter={24} style={{marginBottom: "32px"}}>
+        <Row gutter={24} style={{ marginBottom: "32px" }}>
           <Col span={3}>
             <PanelContainer />
           </Col>
@@ -20,7 +20,6 @@ const App: React.FC = () => {
         </Row>
         <Footer />
       </div>
-
     </Fragment>
   );
 };

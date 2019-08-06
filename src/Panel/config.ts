@@ -19,3 +19,5 @@ export const checkboxItemLayout = {
     sm: { span: 14 }
   }
 };
+
+export const formItemStyle = { marginBottom: "10px"};

@@ -12,7 +12,7 @@ interface Props {
   activeCategoryType?: string;
 }
 
-const MainCategoryButtons = ({ activeCategoryType = "by-category" }: Props) => {
+const MainCategoryButtons = ({ activeCategoryType = "by-item" }: Props) => {
   const categories: Category[] = [
     {
       displayText: "分类检索",
