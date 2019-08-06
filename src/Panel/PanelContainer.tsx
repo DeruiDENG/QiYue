@@ -1,5 +1,5 @@
 import React from "react";
-import ByItemSearchInputPanel from "./ByItemSearchInputPanel";
+import AdvancedSearchInputPanel from "./AdvancedSearchInputPanel";
 import CategorySearchInputPanel from "./CategorySearchInputPanel";
 
 type CategoryType = "by-category" | "by-item" | "by-full-text" | "advanced";
@@ -8,11 +8,11 @@ interface Props {
   type?: CategoryType;
 }
 
-const PanelContainer = ({ type = "by-category" }: Props) => {
+const PanelContainer = ({ type = "advanced" }: Props) => {
   const getInputPanel = (type: CategoryType) => {
     switch (type) {
-      case "by-item": {
-        return <ByItemSearchInputPanel />;
+      case "advanced": {
+        return <AdvancedSearchInputPanel />;
       }
       case "by-category": {
         return <CategorySearchInputPanel />;

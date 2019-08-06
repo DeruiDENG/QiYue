@@ -12,16 +12,11 @@ interface Props {
   activeCategoryType?: string;
 }
 
-const MainCategoryButtons = ({ activeCategoryType = "by-item" }: Props) => {
+const MainCategoryButtons = ({ activeCategoryType = "advanced" }: Props) => {
   const categories: Category[] = [
     {
       displayText: "分类检索",
       type: "by-category",
-      isSelected: false
-    },
-    {
-      displayText: "条目检索",
-      type: "by-item",
       isSelected: false
     },
     {

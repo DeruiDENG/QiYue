@@ -1,5 +1,5 @@
-import React, { useState, ChangeEvent } from "react";
-import { Form, Input, Checkbox, Select, Button } from "antd";
+import React, { ChangeEvent, useState } from "react";
+import { Button, Checkbox, Form, Input, Radio, Select } from "antd";
 import panelImage from "./panel-image-min.jpg";
 import PanelImage from "./PanelImage";
 import "./panelForm.scss";
@@ -14,6 +14,9 @@ export interface ByItemSearchInput {
   place: string;
   timePeriod: TimePeriod;
   connectDifferentType: boolean;
+  searchKeyword: string;
+  searchKeywordLogic: "or" | "and" | "not" | "connect";
+  secondaryKeyWord: string;
 }
 
 const ByItemSearchInputPanel = () => {
@@ -22,7 +25,10 @@ const ByItemSearchInputPanel = () => {
     author: "",
     place: "",
     timePeriod: "all",
-    connectDifferentType: true
+    connectDifferentType: true,
+    searchKeyword: "",
+    searchKeywordLogic: "connect",
+    secondaryKeyWord: ""
   });
 
   const timePeriodOptions: { type: TimePeriod; displayName: string }[] = [
@@ -41,12 +47,45 @@ const ByItemSearchInputPanel = () => {
     });
   };
 
-  const { author, bookName, place, timePeriod, connectDifferentType } = input;
+  const {
+    author,
+    bookName,
+    place,
+    timePeriod,
+    connectDifferentType,
+    searchKeyword,
+    secondaryKeyWord,
+    searchKeywordLogic
+  } = input;
 
   return (
     <div className="advanced-panel">
       <PanelImage url={panelImage} alt="高级搜索栏图片" />
       <Form {...formItemLayout}>
+        <Form.Item label="检索字词" style={formItemStyle}>
+          <Input
+            value={searchKeyword}
+            onChange={setInputField("searchKeyword")}
+          />
+        </Form.Item>
+        <Radio.Group
+          onChange={e => {
+            setInput({ ...input, searchKeywordLogic: e.target.value });
+          }}
+          value={searchKeywordLogic}
+          style={{paddingLeft: "16px", paddingRight:"16px", marginBottom:"12px"}}
+        >
+          <Radio value="and">与</Radio>
+          <Radio value="or">或</Radio>
+          <Radio value="not">非</Radio>
+          <Radio value="connect">递进</Radio>
+        </Radio.Group>
+        <Form.Item label="检索字词" style={formItemStyle}>
+          <Input
+            value={secondaryKeyWord}
+            onChange={setInputField("secondaryKeyWord")}
+          />
+        </Form.Item>
         <Form.Item label="契名" style={formItemStyle}>
           <Input value={bookName} onChange={setInputField("bookName")} />
         </Form.Item>
