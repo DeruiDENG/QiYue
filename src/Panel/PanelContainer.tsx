@@ -1,16 +1,17 @@
 import React from "react";
 import AdvancedSearchInputPanel from "./AdvancedSearchInputPanel";
 import CategorySearchInputPanel from "./CategorySearchInputPanel";
-
-type CategoryType = "by-category" | "by-item" | "by-full-text" | "advanced";
+import { SearchMode, WholeState } from "../datastore/type";
+import { selectors } from "../datastore";
+import { connect } from "react-redux";
 
 interface Props {
-  type?: CategoryType;
+  searchMode: SearchMode;
 }
 
-const PanelContainer = ({ type = "advanced" }: Props) => {
-  const getInputPanel = (type: CategoryType) => {
-    switch (type) {
+const PanelContainer = ({ searchMode }: Props) => {
+  const getInputPanel = (searchMode: SearchMode) => {
+    switch (searchMode) {
       case "advanced": {
         return <AdvancedSearchInputPanel />;
       }
@@ -22,7 +23,11 @@ const PanelContainer = ({ type = "advanced" }: Props) => {
     }
   };
 
-  return getInputPanel(type);
+  return getInputPanel(searchMode);
 };
 
-export default PanelContainer;
+function mapStateToProps(state: WholeState) {
+  return { searchMode: selectors.getSearchMode(state) };
+}
+
+export default connect(mapStateToProps)(PanelContainer);

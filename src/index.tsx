@@ -4,11 +4,15 @@ import "antd/dist/antd.less";
 import "./my-theme.less";
 import "./index.scss";
 import App from "./App";
+import { Provider } from "react-redux";
 import { ConfigProvider } from "antd";
+import { getStore } from "./datastore/utils";
 
 ReactDOM.render(
   <ConfigProvider>
-    <App />
+    <Provider store={getStore()}>
+      <App />
+    </Provider>
   </ConfigProvider>,
   document.getElementById("root")
 );

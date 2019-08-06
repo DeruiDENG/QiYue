@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea10346f-bd7d-4a6a-98a5-f6490473031c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/@types/global.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/datastore/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/datastore/type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/datastore/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panel/ByItemSearchInputPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/AdvancedSearchInputPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panel/PanelContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/PanelContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main-panel/MainCategoryButtons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main-panel/MainCategoryButtons.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,9 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="tsconfig.json" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -111,7 +117,7 @@
       <workItem from="1565007012068" duration="5933000" />
       <workItem from="1565013748204" duration="1439000" />
       <workItem from="1565015212584" duration="3452000" />
-      <workItem from="1565096565876" duration="5113000" />
+      <workItem from="1565096565876" duration="8764000" />
     </task>
     <task id="LOCAL-00001" summary="Setup webpack project.">
       <created>1564884269299</created>
@@ -169,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565100695246</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="添加高级搜索">
+      <created>1565102108672</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1565102108672</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +210,7 @@
     <MESSAGE value="配置Ant Design" />
     <MESSAGE value="使用Ant Design替换原有实现" />
     <MESSAGE value="添加分类搜索" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加分类搜索" />
+    <MESSAGE value="添加高级搜索" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加高级搜索" />
   </component>
 </project>

@@ -1,18 +1,24 @@
 import React from "react";
 import { Button } from "antd";
 import "./mainCategoryButtons.scss";
+import { actionCreators, selectors } from "../datastore";
+import { connect } from "react-redux";
+import { SearchMode, WholeState } from "../datastore/type";
+import { Dispatch } from "redux";
 
 interface Category {
   displayText: string;
-  type: string;
+  type: SearchMode;
   isSelected: boolean;
 }
 
 interface Props {
-  activeCategoryType?: string;
+  activeCategoryType: SearchMode;
+  switchCategory: (mode: SearchMode) => void;
 }
 
-const MainCategoryButtons = ({ activeCategoryType = "advanced" }: Props) => {
+const MainCategoryButtons = ({ activeCategoryType, switchCategory }: Props) => {
+  // @ts-ignore
   const categories: Category[] = [
     {
       displayText: "分类检索",
@@ -43,7 +49,7 @@ const MainCategoryButtons = ({ activeCategoryType = "advanced" }: Props) => {
             <Button
               type={isSelected ? "primary" : null}
               onClick={() => {
-                console.log(`${type} button is clicked`);
+                switchCategory(type);
               }}
             >
               {displayText}
@@ -55,4 +61,19 @@ const MainCategoryButtons = ({ activeCategoryType = "advanced" }: Props) => {
   );
 };
 
-export default MainCategoryButtons;
+function mapStateToProps(state: WholeState) {
+  return { activeCategoryType: selectors.getSearchMode(state) };
+}
+
+function mapDispatchToProps(dispatch: Dispatch) {
+  return {
+    switchCategory: function(mode: SearchMode) {
+      dispatch(actionCreators.switchMode({ mode }));
+    }
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MainCategoryButtons);
