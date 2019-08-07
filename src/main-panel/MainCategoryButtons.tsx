@@ -5,6 +5,7 @@ import { actionCreators, selectors } from "../datastore";
 import { connect } from "react-redux";
 import { SearchMode, WholeState } from "../datastore/type";
 import { Dispatch } from "redux";
+import {useSearchMode} from "../hooks/useSearchMode";
 
 interface Category {
   displayText: string;
@@ -39,6 +40,8 @@ const MainCategoryButtons = ({ activeCategoryType, switchCategory }: Props) => {
     ...category,
     isSelected: category.type === activeCategoryType
   }));
+
+  const searchMode = useSearchMode();
 
   return (
     <div className="main-category-buttons">

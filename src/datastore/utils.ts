@@ -14,3 +14,13 @@ export function getStore() {
   );
   return store;
 }
+
+export function createAction<T extends string, Payload>(
+  type: T,
+  payload: Payload
+): { type: T; payload: Payload } {
+  return {
+    type,
+    payload
+  };
+}

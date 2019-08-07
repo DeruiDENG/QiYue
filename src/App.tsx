@@ -5,6 +5,7 @@ import MainPanel from "./main-panel/MainPanel";
 import PanelContainer from "./Panel/PanelContainer";
 import MainHeader from "./Header/MainHeader";
 import Footer from "./Footer/Footer";
+import MainContentContainer from "./MainContent/MainContentContainer";
 
 const App: React.FC = () => {
   return (
@@ -16,7 +17,9 @@ const App: React.FC = () => {
           <Col span={3}>
             <PanelContainer />
           </Col>
-          <Col span={21}>Some Content</Col>
+          <Col span={21}>
+            <MainContentContainer />
+          </Col>
         </Row>
         <Footer />
       </div>

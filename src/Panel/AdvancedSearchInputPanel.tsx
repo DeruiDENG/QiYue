@@ -1,36 +1,22 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent } from "react";
 import { Button, Checkbox, Form, Input, Radio, Select } from "antd";
 import panelImage from "./panel-image-min.jpg";
 import PanelImage from "./PanelImage";
 import "./panelForm.scss";
 import { checkboxItemLayout, formItemLayout, formItemStyle } from "./config";
+import { AdvancedSearchInput, TimePeriod, WholeState } from "../datastore/type";
+import { actionCreators, selectors } from "../datastore";
+import { Dispatch } from "redux";
+import { connect } from "react-redux";
 
-type TimePeriod = "qing" | "ming" | "minguo" | "all";
 const { Option } = Select;
 
-export interface ByItemSearchInput {
-  bookName: string;
-  author: string;
-  place: string;
-  timePeriod: TimePeriod;
-  connectDifferentType: boolean;
-  searchKeyword: string;
-  searchKeywordLogic: "or" | "and" | "not" | "connect";
-  secondaryKeyWord: string;
+interface Props {
+  input: AdvancedSearchInput;
+  setInput: (input: AdvancedSearchInput) => void;
 }
 
-const ByItemSearchInputPanel = () => {
-  const [input, setInput] = useState<ByItemSearchInput>({
-    bookName: "",
-    author: "",
-    place: "",
-    timePeriod: "all",
-    connectDifferentType: true,
-    searchKeyword: "",
-    searchKeywordLogic: "connect",
-    secondaryKeyWord: ""
-  });
-
+const AdvancedSearchInputPanel = ({ input, setInput }: Props) => {
   const timePeriodOptions: { type: TimePeriod; displayName: string }[] = [
     { type: "all", displayName: "所有时代" },
     { type: "ming", displayName: "明代" },
@@ -73,7 +59,11 @@ const ByItemSearchInputPanel = () => {
             setInput({ ...input, searchKeywordLogic: e.target.value });
           }}
           value={searchKeywordLogic}
-          style={{paddingLeft: "16px", paddingRight:"16px", marginBottom:"12px"}}
+          style={{
+            paddingLeft: "16px",
+            paddingRight: "16px",
+            marginBottom: "12px"
+          }}
         >
           <Radio value="and">与</Radio>
           <Radio value="or">或</Radio>
@@ -139,4 +129,19 @@ const ByItemSearchInputPanel = () => {
   );
 };
 
-export default ByItemSearchInputPanel;
+function mapStateToProps(state: WholeState) {
+  return { input: selectors.getAdvancedSearchInput(state) };
+}
+
+function mapDispatchToProps(dispatch: Dispatch) {
+  return {
+    setInput: function(input: AdvancedSearchInput) {
+      dispatch(actionCreators.changeAdvancedSearchInput({ input }));
+    }
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AdvancedSearchInputPanel);
