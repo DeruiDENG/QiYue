@@ -1,28 +1,30 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, useCallback } from "react";
 import { Button, Checkbox, Form, Input, Radio, Select } from "antd";
 import panelImage from "./panel-image-min.jpg";
 import PanelImage from "./PanelImage";
 import "./panelForm.scss";
 import { checkboxItemLayout, formItemLayout, formItemStyle } from "./config";
-import { AdvancedSearchInput, TimePeriod, WholeState } from "../datastore/type";
+import { AdvancedSearchInput, TimePeriod } from "../datastore/type";
 import { actionCreators, selectors } from "../datastore";
-import { Dispatch } from "redux";
-import { connect } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const { Option } = Select;
 
-interface Props {
-  input: AdvancedSearchInput;
-  setInput: (input: AdvancedSearchInput) => void;
-}
-
-const AdvancedSearchInputPanel = ({ input, setInput }: Props) => {
+const AdvancedSearchInputPanel = () => {
   const timePeriodOptions: { type: TimePeriod; displayName: string }[] = [
     { type: "all", displayName: "所有时代" },
     { type: "ming", displayName: "明代" },
     { type: "qing", displayName: "清代" },
     { type: "minguo", displayName: "民国" }
   ];
+
+  const input = useSelector(selectors.getAdvancedSearchInput);
+  const dispatch = useDispatch();
+  const setInput = useCallback(
+    (input: AdvancedSearchInput) =>
+      dispatch(actionCreators.changeAdvancedSearchInput({ input })),
+    [dispatch]
+  );
 
   const setInputField = (fieldName: string) => (
     event: ChangeEvent<HTMLInputElement>
@@ -129,19 +131,4 @@ const AdvancedSearchInputPanel = ({ input, setInput }: Props) => {
   );
 };
 
-function mapStateToProps(state: WholeState) {
-  return { input: selectors.getAdvancedSearchInput(state) };
-}
-
-function mapDispatchToProps(dispatch: Dispatch) {
-  return {
-    setInput: function(input: AdvancedSearchInput) {
-      dispatch(actionCreators.changeAdvancedSearchInput({ input }));
-    }
-  };
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(AdvancedSearchInputPanel);
+export default AdvancedSearchInputPanel;

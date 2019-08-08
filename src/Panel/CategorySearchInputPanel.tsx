@@ -1,8 +1,10 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import { Tree } from "antd";
 import "./panelForm.scss";
 import PanelImage from "./PanelImage";
 import panelImage from "./panel-image-min.jpg";
+import { useDispatch, useSelector } from "react-redux";
+import { actionCreators, selectors } from "../datastore";
 
 const { TreeNode, DirectoryTree } = Tree;
 
@@ -30,7 +32,16 @@ const CategorySearchInputPanel = () => {
     }
   ];
 
-  const [checkedKeys, setCheckedKeys] = useState<string[]>([]);
+  const { checkedKeys } = useSelector(selectors.getByCategorySearchInput);
+  const dispatch = useDispatch();
+  const setCheckedKeys = useCallback(
+    (checkedKeys: string[]) => {
+      dispatch(
+        actionCreators.changeCategorySearchInput({ input: { checkedKeys } })
+      );
+    },
+    [dispatch]
+  );
 
   const onSelect = useCallback((selectedKeys: string[]) => {
     setCheckedKeys(selectedKeys);

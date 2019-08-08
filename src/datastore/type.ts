@@ -6,6 +6,12 @@ export interface WholeState {
   mode: SearchMode;
   advancedSearch: {
     input: AdvancedSearchInput;
+    savedInput: AdvancedSearchInput;
+    contents: { [key: number]: ContractAbstract[] };
+  };
+  byCategorySearch: {
+    input: ByCategorySearchInput;
+    savedInput: ByCategorySearchInput;
     contents: { [key: number]: ContractAbstract[] };
   };
 }
@@ -19,6 +25,10 @@ export interface AdvancedSearchInput {
   searchKeyword: string;
   searchKeywordLogic: "or" | "and" | "not" | "connect";
   secondaryKeyWord: string;
+}
+
+export interface ByCategorySearchInput {
+  checkedKeys: string[];
 }
 
 export interface ContractAbstract {

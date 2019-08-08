@@ -1,4 +1,4 @@
-import { AdvancedSearchInput, WholeState } from "./type";
+import { AdvancedSearchInput, ByCategorySearchInput, WholeState } from "./type";
 import { createAction } from "./utils";
 
 const initialState: WholeState = {
@@ -14,18 +14,40 @@ const initialState: WholeState = {
       searchKeywordLogic: "connect",
       secondaryKeyWord: ""
     },
+    savedInput: {
+      bookName: "",
+      author: "",
+      place: "",
+      timePeriod: "all",
+      connectDifferentType: true,
+      searchKeyword: "",
+      searchKeywordLogic: "connect",
+      secondaryKeyWord: ""
+    },
+    contents: {}
+  },
+  byCategorySearch: {
+    input: {
+      checkedKeys: []
+    },
+    savedInput: {
+      checkedKeys: []
+    },
     contents: {}
   }
 };
 
 const SWITCH_MODE = "SWITCH_MODE";
 const CHANGE_ADVANCED_SEARCH_INPUT = "CHANGE_ADVANCED_SEARCH_INPUT";
+const CHANGE_CATEGORY_SEARCH_INPUT = "CHANGE_CATEGORY_SEARCH_INPUT";
 
 export const actionCreators = {
   switchMode: ({ mode }: { mode: WholeState["mode"] }) =>
     createAction(SWITCH_MODE, { mode }),
   changeAdvancedSearchInput: ({ input }: { input: AdvancedSearchInput }) =>
-    createAction(CHANGE_ADVANCED_SEARCH_INPUT, { input })
+    createAction(CHANGE_ADVANCED_SEARCH_INPUT, { input }),
+  changeCategorySearchInput: ({ input }: { input: ByCategorySearchInput }) =>
+    createAction(CHANGE_CATEGORY_SEARCH_INPUT, { input })
 };
 
 export const reducers = (
@@ -49,6 +71,16 @@ export const reducers = (
         }
       };
     }
+    case CHANGE_CATEGORY_SEARCH_INPUT: {
+      const { input } = action.payload;
+      return {
+        ...state,
+        byCategorySearch: {
+          ...state.byCategorySearch,
+          input
+        }
+      };
+    }
     default:
       return state;
   }
@@ -62,7 +94,12 @@ function getAdvancedSearchInput(state: WholeState): AdvancedSearchInput {
   return state.advancedSearch.input;
 }
 
+function getByCategorySearchInput(state: WholeState): ByCategorySearchInput {
+  return state.byCategorySearch.input;
+}
+
 export const selectors = {
   getSearchMode,
-  getAdvancedSearchInput
+  getAdvancedSearchInput,
+  getByCategorySearchInput
 };

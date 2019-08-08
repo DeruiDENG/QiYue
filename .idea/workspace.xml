@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea10346f-bd7d-4a6a-98a5-f6490473031c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MainContent/AbstractContentTable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainContent/AdvancedSearchContent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainContent/MainContentContainer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useSearchMode.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panel/AdvancedSearchInputPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/AdvancedSearchInputPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panel/CategorySearchInputPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/CategorySearchInputPanel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/datastore/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/datastore/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datastore/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main-panel/MainCategoryButtons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main-panel/MainCategoryButtons.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +113,8 @@
       <workItem from="1565013748204" duration="1439000" />
       <workItem from="1565015212584" duration="3452000" />
       <workItem from="1565096565876" duration="9162000" />
-      <workItem from="1565188496419" duration="5771000" />
+      <workItem from="1565188496419" duration="5863000" />
+      <workItem from="1565272811807" duration="1120000" />
     </task>
     <task id="LOCAL-00001" summary="Setup webpack project.">
       <created>1564884269299</created>
@@ -191,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565105929735</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="使用redux接管input，引入react hooks">
+      <created>1565194346746</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1565194346746</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +223,7 @@
     <MESSAGE value="添加分类搜索" />
     <MESSAGE value="添加高级搜索" />
     <MESSAGE value="配置Redux及搜索类型切换" />
-    <option name="LAST_COMMIT_MESSAGE" value="配置Redux及搜索类型切换" />
+    <MESSAGE value="使用redux接管input，引入react hooks" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用redux接管input，引入react hooks" />
   </component>
 </project>
