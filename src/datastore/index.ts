@@ -1,41 +1,6 @@
 import { AdvancedSearchInput, ByCategorySearchInput, WholeState } from "./type";
 import { createAction } from "./utils";
-
-const initialState: WholeState = {
-  mode: "by-category",
-  advancedSearch: {
-    input: {
-      bookName: "",
-      author: "",
-      place: "",
-      timePeriod: "all",
-      connectDifferentType: true,
-      searchKeyword: "",
-      searchKeywordLogic: "connect",
-      secondaryKeyWord: ""
-    },
-    savedInput: {
-      bookName: "",
-      author: "",
-      place: "",
-      timePeriod: "all",
-      connectDifferentType: true,
-      searchKeyword: "",
-      searchKeywordLogic: "connect",
-      secondaryKeyWord: ""
-    },
-    contents: {}
-  },
-  byCategorySearch: {
-    input: {
-      checkedKeys: []
-    },
-    savedInput: {
-      checkedKeys: []
-    },
-    contents: {}
-  }
-};
+import { initialState } from "./initialState";
 
 const SWITCH_MODE = "SWITCH_MODE";
 const CHANGE_ADVANCED_SEARCH_INPUT = "CHANGE_ADVANCED_SEARCH_INPUT";
@@ -96,6 +61,10 @@ function getAdvancedSearchInput(state: WholeState): AdvancedSearchInput {
 
 function getByCategorySearchInput(state: WholeState): ByCategorySearchInput {
   return state.byCategorySearch.input;
+}
+
+function isAdvancedContentReady(state:WholeState):boolean{
+
 }
 
 export const selectors = {

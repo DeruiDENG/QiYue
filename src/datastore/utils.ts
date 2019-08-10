@@ -1,5 +1,7 @@
-import { createStore, Store } from "redux";
+import { createStore, Store, compose, applyMiddleware } from "redux";
 import { reducers } from "./index";
+import createSagaMiddleware from "redux-saga";
+import mySaga from "./saga";
 
 let store: Store = null;
 
@@ -8,10 +10,17 @@ export function getStore() {
     return store;
   }
 
+  const sagaMiddleware = createSagaMiddleware();
   store = createStore(
     reducers,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    compose(
+      applyMiddleware(sagaMiddleware),
+      window.__REDUX_DEVTOOLS_EXTENSION__ &&
+        window.__REDUX_DEVTOOLS_EXTENSION__()
+    )
   );
+
+  sagaMiddleware.run(mySaga);
   return store;
 }
 

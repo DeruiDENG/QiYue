@@ -8,11 +8,13 @@ export interface WholeState {
     input: AdvancedSearchInput;
     savedInput: AdvancedSearchInput;
     contents: { [key: number]: ContractAbstract[] };
+    isContentLoading: false;
   };
   byCategorySearch: {
     input: ByCategorySearchInput;
     savedInput: ByCategorySearchInput;
     contents: { [key: number]: ContractAbstract[] };
+    isContentLoading: false;
   };
 }
 

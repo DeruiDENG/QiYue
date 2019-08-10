@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea10346f-bd7d-4a6a-98a5-f6490473031c" name="Default Changelist" comment="">
+    <list default="true" id="ea10346f-bd7d-4a6a-98a5-f6490473031c" name="Default Changelist" comment="Add docs">
+      <change afterPath="$PROJECT_DIR$/src/datastore/initialState.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/datastore/saga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/qiyue.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/qiyue.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datastore/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datastore/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datastore/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +62,7 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Projects\qiyue\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
     <property name="ts.external.directory.path" value="C:\Projects\qiyue\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -95,7 +102,7 @@
     </configuration>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\moonf\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -112,7 +119,8 @@
       <workItem from="1565015212584" duration="3452000" />
       <workItem from="1565096565876" duration="9162000" />
       <workItem from="1565188496419" duration="5863000" />
-      <workItem from="1565272811807" duration="2105000" />
+      <workItem from="1565272811807" duration="3626000" />
+      <workItem from="1565402744584" duration="2710000" />
     </task>
     <task id="LOCAL-00001" summary="Setup webpack project.">
       <created>1564884269299</created>
@@ -198,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565274127952</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add docs">
+      <created>1565275051948</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1565275051948</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +245,7 @@
     <MESSAGE value="配置Redux及搜索类型切换" />
     <MESSAGE value="使用redux接管input，引入react hooks" />
     <MESSAGE value="Move ByCategoryInput to redux" />
-    <option name="LAST_COMMIT_MESSAGE" value="Move ByCategoryInput to redux" />
+    <MESSAGE value="Add docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add docs" />
   </component>
 </project>

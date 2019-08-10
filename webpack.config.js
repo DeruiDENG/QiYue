@@ -59,7 +59,10 @@ module.exports = function(env) {
           test: /\.tsx?$/,
           exclude: /(node_modules|bower_components)/,
           use: {
-            loader: "babel-loader"
+            loader: "babel-loader",
+            options: {
+              plugins: ["@babel/plugin-transform-runtime"]
+            }
           }
         }
       ]
