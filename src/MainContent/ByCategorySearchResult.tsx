@@ -25,7 +25,7 @@ const ByCategorySearchResult = () => {
     {
       title: "契名",
       dataIndex: "name",
-    }
+    },
   ];
 
   const dispatch = useDispatch();
@@ -43,7 +43,10 @@ const ByCategorySearchResult = () => {
       columns={columns}
       rowKey={contract => String(contract.id)}
       dataSource={contracts}
-      pagination={pagination}
+      pagination={{
+        ...pagination,
+        showTotal: (total: number) => `共${total}条数据`,
+      }}
       loading={isLoading}
       onChange={onChange}
     />
