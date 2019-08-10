@@ -63,10 +63,6 @@ function getByCategorySearchInput(state: WholeState): ByCategorySearchInput {
   return state.byCategorySearch.input;
 }
 
-function isAdvancedContentReady(state:WholeState):boolean{
-
-}
-
 export const selectors = {
   getSearchMode,
   getAdvancedSearchInput,

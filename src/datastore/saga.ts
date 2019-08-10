@@ -25,7 +25,7 @@ function* fetchUser(
   Allows concurrent fetches of user.
 */
 function* mySaga() {
-  yield takeEvery("USER_FETCH_REQUESTED", fetchUser);
+  yield takeEvery(FETCH_ADVANCED_SEARCH_DATA, fetchUser);
 }
 
 export default mySaga;
