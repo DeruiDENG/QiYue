@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea10346f-bd7d-4a6a-98a5-f6490473031c" name="Default Changelist" comment="Add mock data as by-category search result">
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+    <list default="true" id="ea10346f-bd7d-4a6a-98a5-f6490473031c" name="Default Changelist" comment="Update prettier config">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panel/CategorySearchInputPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/CategorySearchInputPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datastore/initialState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/initialState.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainContent/ByCategorySearchResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainContent/ByCategorySearchResult.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainContent/MainContentContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainContent/MainContentContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datastore/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/index.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +115,7 @@
       <workItem from="1565096565876" duration="9162000" />
       <workItem from="1565188496419" duration="5863000" />
       <workItem from="1565272811807" duration="3626000" />
-      <workItem from="1565402744584" duration="13397000" />
+      <workItem from="1565402744584" duration="15501000" />
     </task>
     <task id="LOCAL-00001" summary="Setup webpack project.">
       <created>1564884269299</created>
@@ -229,11 +229,28 @@
       <option name="project" value="LOCAL" />
       <updated>1565430259288</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Update prettier config">
+      <created>1565442990721</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1565442990721</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -265,6 +282,7 @@
     <MESSAGE value="添加redux-saga" />
     <MESSAGE value="Add fetch utility function" />
     <MESSAGE value="Add mock data as by-category search result" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add mock data as by-category search result" />
+    <MESSAGE value="Update prettier config" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update prettier config" />
   </component>
 </project>

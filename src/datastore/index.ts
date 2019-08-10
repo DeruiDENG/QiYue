@@ -2,7 +2,7 @@ import {
   AdvancedSearchInput,
   ByCategorySearchInput,
   ByCategorySearchResult,
-  WholeState
+  WholeState,
 } from "./type";
 import { createAction } from "./utils";
 import { initialState } from "./initialState";
@@ -10,6 +10,7 @@ import { initialState } from "./initialState";
 const SWITCH_MODE = "SWITCH_MODE";
 const CHANGE_ADVANCED_SEARCH_INPUT = "CHANGE_ADVANCED_SEARCH_INPUT";
 const CHANGE_CATEGORY_SEARCH_INPUT = "CHANGE_CATEGORY_SEARCH_INPUT";
+const CHANGE_CATEGORY_SEARCH_PAGINATION = "CHANGE_CATEGORY_SEARCH_PAGINATION";
 
 export const actionCreators = {
   switchMode: ({ mode }: { mode: WholeState["mode"] }) =>
@@ -17,7 +18,9 @@ export const actionCreators = {
   changeAdvancedSearchInput: ({ input }: { input: AdvancedSearchInput }) =>
     createAction(CHANGE_ADVANCED_SEARCH_INPUT, { input }),
   changeCategorySearchInput: ({ input }: { input: ByCategorySearchInput }) =>
-    createAction(CHANGE_CATEGORY_SEARCH_INPUT, { input })
+    createAction(CHANGE_CATEGORY_SEARCH_INPUT, { input }),
+  changeCategorySearchPagination: (pageNumber: number) =>
+    createAction(CHANGE_CATEGORY_SEARCH_PAGINATION, { pageNumber }),
 };
 
 export const reducers = (
@@ -28,7 +31,7 @@ export const reducers = (
     case SWITCH_MODE: {
       return {
         ...state,
-        mode: action.payload.mode
+        mode: action.payload.mode,
       };
     }
     case CHANGE_ADVANCED_SEARCH_INPUT: {
@@ -37,8 +40,8 @@ export const reducers = (
         ...state,
         advancedSearch: {
           ...state.advancedSearch,
-          input
-        }
+          input,
+        },
       };
     }
     case CHANGE_CATEGORY_SEARCH_INPUT: {
@@ -47,8 +50,21 @@ export const reducers = (
         ...state,
         byCategorySearch: {
           ...state.byCategorySearch,
-          input
-        }
+          input,
+        },
+      };
+    }
+    case CHANGE_CATEGORY_SEARCH_PAGINATION: {
+      const { pageNumber } = action.payload;
+      return {
+        ...state,
+        byCategorySearch: {
+          ...state.byCategorySearch,
+          pagination: {
+            ...state.byCategorySearch.pagination,
+            current: pageNumber,
+          },
+        },
       };
     }
     default:
@@ -74,7 +90,7 @@ function getByCategorySearchResult(state: WholeState): ByCategorySearchResult {
   const result = contents[current] || [];
   return {
     pagination,
-    result
+    result,
   };
 }
 
@@ -87,5 +103,5 @@ export const selectors = {
   getAdvancedSearchInput,
   getByCategorySearchInput,
   getByCategorySearchResult,
-  isLoadingByCategorySearchResult
+  isLoadingByCategorySearchResult,
 };

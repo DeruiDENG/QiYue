@@ -17,7 +17,7 @@ const App: React.FC = () => {
           <Col span={3}>
             <PanelContainer />
           </Col>
-          <Col span={21}>
+          <Col span={18}>
             <MainContentContainer />
           </Col>
         </Row>

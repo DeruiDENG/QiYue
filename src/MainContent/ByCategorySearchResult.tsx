@@ -1,33 +1,37 @@
 import React, { useCallback } from "react";
 import { Table } from "antd";
-import { useSelector } from "react-redux";
-import { selectors } from "../datastore";
+import { useDispatch, useSelector } from "react-redux";
+import { actionCreators, selectors } from "../datastore";
+import { PaginationConfig } from "antd/es/pagination";
 
 const ByCategorySearchResult = () => {
   const columns = [
     {
+      title: "序号",
+      render: (text, record, index) => index + 1,
+    },
+    {
       title: "时代",
       dataIndex: "time",
-      width: "15%"
     },
     {
       title: "公元",
       dataIndex: "year",
-      width: "15%"
     },
     {
       title: "地点",
       dataIndex: "location",
-      width: "20%"
     },
     {
       title: "契名",
       dataIndex: "name",
-      width: "50%"
     }
   ];
 
-  const onChange = useCallback(() => {}, []);
+  const dispatch = useDispatch();
+  const onChange = useCallback((pagination: PaginationConfig) => {
+    dispatch(actionCreators.changeCategorySearchPagination(pagination.current));
+  }, []);
 
   const { result: contracts, pagination } = useSelector(
     selectors.getByCategorySearchResult
