@@ -1,6 +1,7 @@
 import React from "react";
 import AdvancedSearchContent from "./AdvancedSearchContent";
 import { useSearchMode } from "../hooks/useSearchMode";
+import ByCategorySearchResult from "./ByCategorySearchResult";
 
 const MainContentContainer = () => {
   const searchMode = useSearchMode();
@@ -9,7 +10,7 @@ const MainContentContainer = () => {
       return <AdvancedSearchContent />;
     }
     case "by-category": {
-      return null;
+      return <ByCategorySearchResult />;
     }
     case "by-full-text": {
       return null;

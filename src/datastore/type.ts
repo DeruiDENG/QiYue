@@ -1,6 +1,11 @@
 export type SearchMode = "by-category" | "by-full-text" | "advanced";
 
-export type TimePeriod = "qing" | "ming" | "minguo" | "all";
+export enum TimePeriod {
+  Qing = "清代",
+  Ming = "明代",
+  MinGuo = "民国",
+  All = "所有"
+}
 
 export interface WholeState {
   mode: SearchMode;
@@ -15,7 +20,13 @@ export interface WholeState {
     savedInput: ByCategorySearchInput;
     contents: { [key: number]: ContractAbstract[] };
     isContentLoading: false;
+    pagination: Pagination;
   };
+}
+
+export interface Pagination {
+  current: number;
+  total: number;
 }
 
 export interface AdvancedSearchInput {
@@ -36,7 +47,12 @@ export interface ByCategorySearchInput {
 export interface ContractAbstract {
   id: number;
   name: string;
-  author: string;
-  time: string;
+  time: TimePeriod;
+  year?: number;
   location: string;
+}
+
+export interface ByCategorySearchResult {
+  pagination: Pagination;
+  result: ContractAbstract[];
 }

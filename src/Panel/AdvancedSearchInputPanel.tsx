@@ -12,10 +12,10 @@ const { Option } = Select;
 
 const AdvancedSearchInputPanel = () => {
   const timePeriodOptions: { type: TimePeriod; displayName: string }[] = [
-    { type: "all", displayName: "所有时代" },
-    { type: "ming", displayName: "明代" },
-    { type: "qing", displayName: "清代" },
-    { type: "minguo", displayName: "民国" }
+    { type: TimePeriod.All, displayName: "所有时代" },
+    { type: TimePeriod.Ming, displayName: "明代" },
+    { type: TimePeriod.Qing, displayName: "清代" },
+    { type: TimePeriod.MinGuo, displayName: "民国" }
   ];
 
   const input = useSelector(selectors.getAdvancedSearchInput);

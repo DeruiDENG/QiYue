@@ -1,4 +1,9 @@
-import { AdvancedSearchInput, ByCategorySearchInput, WholeState } from "./type";
+import {
+  AdvancedSearchInput,
+  ByCategorySearchInput,
+  ByCategorySearchResult,
+  WholeState
+} from "./type";
 import { createAction } from "./utils";
 import { initialState } from "./initialState";
 
@@ -63,8 +68,24 @@ function getByCategorySearchInput(state: WholeState): ByCategorySearchInput {
   return state.byCategorySearch.input;
 }
 
+function getByCategorySearchResult(state: WholeState): ByCategorySearchResult {
+  const { pagination, contents } = state.byCategorySearch;
+  const { current } = pagination;
+  const result = contents[current] || [];
+  return {
+    pagination,
+    result
+  };
+}
+
+function isLoadingByCategorySearchResult(state: WholeState): boolean {
+  return state.byCategorySearch.isContentLoading;
+}
+
 export const selectors = {
   getSearchMode,
   getAdvancedSearchInput,
-  getByCategorySearchInput
+  getByCategorySearchInput,
+  getByCategorySearchResult,
+  isLoadingByCategorySearchResult
 };
