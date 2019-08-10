@@ -160,7 +160,7 @@ export const initialState: WholeState = {
     contents: advancedSearchContractAbstract,
     pagination: {
       current: 1,
-      total: 2
+      total: 17
     },
     isContentLoading: false
   }

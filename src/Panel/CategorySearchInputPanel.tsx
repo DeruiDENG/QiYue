@@ -12,24 +12,24 @@ const CategorySearchInputPanel = () => {
   const categories = [
     {
       mainCategory: "土地契约",
-      subCategories: ["典契", "推契", "买卖契", "抵押"]
+      subCategories: ["典契", "推契", "买卖契", "抵押"],
     },
     {
       mainCategory: "房屋、树木及其他物品文书",
-      subCategories: ["典卖", "抵押"]
+      subCategories: ["典卖", "抵押"],
     },
     {
       mainCategory: "商业类文书",
-      subCategories: ["结社合同", "揭借合同", "银钱", "账册"]
+      subCategories: ["结社合同", "揭借合同", "银钱", "账册"],
     },
     {
       mainCategory: "家族文书",
-      subCategories: ["分家文书", "婚假文书", "承继文书", "立嗣文书"]
+      subCategories: ["分家文书", "婚假文书", "承继文书", "立嗣文书"],
     },
     {
       mainCategory: "其他文书",
-      subCategories: []
-    }
+      subCategories: [],
+    },
   ];
 
   const { checkedKeys } = useSelector(selectors.getByCategorySearchInput);
