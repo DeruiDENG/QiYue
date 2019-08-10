@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { Table } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { actionCreators, selectors } from "../datastore";
+import { actionCreators, selectors } from "../datastore/byCategory";
 import { PaginationConfig } from "antd/es/pagination";
 
 const ByCategorySearchResult = () => {

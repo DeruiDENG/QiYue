@@ -1,5 +1,5 @@
 import { takeEvery } from "redux-saga/effects";
-import { createAction } from "./utils";
+import { createAction } from "../utils";
 
 const FETCH_ADVANCED_SEARCH_DATA = "FETCH_ADVANCED_SEARCH_DATA";
 

@@ -5,7 +5,7 @@ import PanelImage from "./PanelImage";
 import "./panelForm.scss";
 import { checkboxItemLayout, formItemLayout, formItemStyle } from "./config";
 import { AdvancedSearchInput, TimePeriod } from "../datastore/type";
-import { actionCreators, selectors } from "../datastore";
+import { actionCreators, selectors } from "../datastore/advancedSearch";
 import { useDispatch, useSelector } from "react-redux";
 
 const { Option } = Select;
@@ -15,7 +15,7 @@ const AdvancedSearchInputPanel = () => {
     { type: TimePeriod.All, displayName: "所有时代" },
     { type: TimePeriod.Ming, displayName: "明代" },
     { type: TimePeriod.Qing, displayName: "清代" },
-    { type: TimePeriod.MinGuo, displayName: "民国" }
+    { type: TimePeriod.MinGuo, displayName: "民国" },
   ];
 
   const input = useSelector(selectors.getAdvancedSearchInput);
@@ -31,7 +31,7 @@ const AdvancedSearchInputPanel = () => {
   ) => {
     setInput({
       ...input,
-      [fieldName]: event.target.value
+      [fieldName]: event.target.value,
     });
   };
 
@@ -43,7 +43,7 @@ const AdvancedSearchInputPanel = () => {
     connectDifferentType,
     searchKeyword,
     secondaryKeyWord,
-    searchKeywordLogic
+    searchKeywordLogic,
   } = input;
 
   return (
@@ -64,7 +64,7 @@ const AdvancedSearchInputPanel = () => {
           style={{
             paddingLeft: "16px",
             paddingRight: "16px",
-            marginBottom: "12px"
+            marginBottom: "12px",
           }}
         >
           <Radio value="and">与</Radio>
@@ -90,7 +90,7 @@ const AdvancedSearchInputPanel = () => {
             onSelect={value => {
               setInput({
                 ...input,
-                timePeriod: value
+                timePeriod: value,
               });
             }}
           >
@@ -116,7 +116,7 @@ const AdvancedSearchInputPanel = () => {
             onChange={checkedValue => {
               setInput({
                 ...input,
-                connectDifferentType: checkedValue.target.checked
+                connectDifferentType: checkedValue.target.checked,
               });
             }}
           />

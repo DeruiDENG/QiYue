@@ -1,10 +1,14 @@
-export type SearchMode = "by-category" | "by-full-text" | "advanced";
+export enum SearchMode {
+  ByCategory = "by-category",
+  FullText = "by-full-text",
+  Advanced = "advanced",
+}
 
 export enum TimePeriod {
   Qing = "清代",
   Ming = "明代",
   MinGuo = "民国",
-  All = "所有"
+  All = "所有",
 }
 
 export interface WholeState {
@@ -12,7 +16,7 @@ export interface WholeState {
   advancedSearch: {
     input: AdvancedSearchInput;
     savedInput: AdvancedSearchInput;
-    contents: { [key: number]: ContractAbstract[] };
+    contents: { [key: number]: AdvancedContractAbstract[] };
     isContentLoading: false;
   };
   byCategorySearch: {
@@ -50,6 +54,15 @@ export interface ContractAbstract {
   time: TimePeriod;
   year?: number;
   location: string;
+}
+
+export interface AdvancedContractAbstract {
+  id: number;
+  name: string;
+  time: TimePeriod;
+  year?: number;
+  location: string;
+  sentences: string[];
 }
 
 export interface ByCategorySearchResult {

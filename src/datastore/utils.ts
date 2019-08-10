@@ -1,7 +1,15 @@
-import { createStore, Store, compose, applyMiddleware } from "redux";
-import { reducers } from "./index";
+import {
+  createStore,
+  Store,
+  compose,
+  applyMiddleware,
+  combineReducers,
+} from "redux";
 import createSagaMiddleware from "redux-saga";
-import mySaga from "./saga";
+import mySaga from "./byCategory/saga";
+import { reducers as searchModeReducers } from "./searchMode";
+import { reducers as advancedSearchReducers } from "./advancedSearch";
+import { reducers as byCategorySearchReducers } from "./byCategory";
 
 let store: Store = null;
 
@@ -11,6 +19,11 @@ export function getStore() {
   }
 
   const sagaMiddleware = createSagaMiddleware();
+  const reducers = combineReducers({
+    mode: searchModeReducers,
+    advancedSearch: advancedSearchReducers,
+    byCategorySearch: byCategorySearchReducers,
+  });
   store = createStore(
     reducers,
     compose(
@@ -30,6 +43,6 @@ export function createAction<T extends string, Payload>(
 ): { type: T; payload: Payload } {
   return {
     type,
-    payload
+    payload,
   };
 }

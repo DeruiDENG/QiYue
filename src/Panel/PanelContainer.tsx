@@ -2,7 +2,7 @@ import React from "react";
 import AdvancedSearchInputPanel from "./AdvancedSearchInputPanel";
 import CategorySearchInputPanel from "./CategorySearchInputPanel";
 import { SearchMode, WholeState } from "../datastore/type";
-import { selectors } from "../datastore";
+import { selectors } from "../datastore/searchMode";
 import { connect } from "react-redux";
 
 interface Props {

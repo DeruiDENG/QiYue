@@ -1,52 +1,43 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Button } from "antd";
 import "./mainCategoryButtons.scss";
-import { actionCreators, selectors } from "../datastore";
-import { connect } from "react-redux";
-import { SearchMode, WholeState } from "../datastore/type";
-import { Dispatch } from "redux";
-import {useSearchMode} from "../hooks/useSearchMode";
+import { actionCreators } from "../datastore/searchMode";
+import { useDispatch } from "react-redux";
+import { SearchMode } from "../datastore/type";
+import { useSearchMode } from "../hooks/useSearchMode";
 
 interface Category {
   displayText: string;
   type: SearchMode;
-  isSelected: boolean;
 }
 
-interface Props {
-  activeCategoryType: SearchMode;
-  switchCategory: (mode: SearchMode) => void;
-}
-
-const MainCategoryButtons = ({ activeCategoryType, switchCategory }: Props) => {
-  // @ts-ignore
+const MainCategoryButtons = () => {
   const categories: Category[] = [
     {
       displayText: "分类检索",
-      type: "by-category",
-      isSelected: false
+      type: SearchMode.ByCategory,
     },
     {
       displayText: "全文检索",
-      type: "by-full-text",
-      isSelected: false
+      type: SearchMode.FullText,
     },
     {
       displayText: "高级检索",
-      type: "advanced",
-      isSelected: false
-    }
-  ].map(category => ({
-    ...category,
-    isSelected: category.type === activeCategoryType
-  }));
+      type: SearchMode.Advanced,
+    },
+  ];
 
   const searchMode = useSearchMode();
+  const dispatch = useDispatch();
+  const switchCategory = useCallback((mode: SearchMode) => {
+    dispatch(actionCreators.switchMode({ mode }));
+  }, []);
 
   return (
     <div className="main-category-buttons">
       {categories.map(category => {
-        const { isSelected, type, displayText } = category;
+        const { type, displayText } = category;
+        const isSelected = type === searchMode;
         return (
           <div key={type} className="main-category-buttons__item">
             <Button
@@ -64,19 +55,4 @@ const MainCategoryButtons = ({ activeCategoryType, switchCategory }: Props) => {
   );
 };
 
-function mapStateToProps(state: WholeState) {
-  return { activeCategoryType: selectors.getSearchMode(state) };
-}
-
-function mapDispatchToProps(dispatch: Dispatch) {
-  return {
-    switchCategory: function(mode: SearchMode) {
-      dispatch(actionCreators.switchMode({ mode }));
-    }
-  };
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MainCategoryButtons);
+export default MainCategoryButtons;

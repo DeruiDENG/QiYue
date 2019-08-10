@@ -4,7 +4,7 @@ import "./panelForm.scss";
 import PanelImage from "./PanelImage";
 import panelImage from "./panel-image-min.jpg";
 import { useDispatch, useSelector } from "react-redux";
-import { actionCreators, selectors } from "../datastore";
+import { actionCreators, selectors } from "../datastore/byCategory";
 
 const { TreeNode, DirectoryTree } = Tree;
 
