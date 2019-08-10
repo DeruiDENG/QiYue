@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, Fragment } from "react";
 import { Table } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { actionCreators, selectors } from "../datastore/byCategory";
@@ -41,7 +41,7 @@ const ByCategorySearchResult = () => {
   return (
     <Table
       columns={columns}
-      rowKey={contract => String(contract.id)}
+      rowKey={contract => contract.id}
       dataSource={contracts}
       pagination={{
         ...pagination,

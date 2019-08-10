@@ -1,19 +1,20 @@
 import {
   ByCategorySearchInput,
-  ByCategorySearchResult,
+  ContractAbstract,
+  Pagination,
   WholeState,
 } from "../type";
 import { createAction } from "../utils";
 import { initialState } from "./initialState";
 
-const CHANGE_CATEGORY_SEARCH_INPUT = "CHANGE_CATEGORY_SEARCH_INPUT";
-const CHANGE_CATEGORY_SEARCH_PAGINATION = "CHANGE_CATEGORY_SEARCH_PAGINATION";
+const CHANGE_INPUT = "CATEGORY_SEARCH__CHANGE_INPUT";
+const CHANGE_RESULT_PAGINATION = "CATEGORY_SEARCH__CHANGE_RESULT_PAGINATION";
 
 export const actionCreators = {
   changeCategorySearchInput: ({ input }: { input: ByCategorySearchInput }) =>
-    createAction(CHANGE_CATEGORY_SEARCH_INPUT, { input }),
+    createAction(CHANGE_INPUT, { input }),
   changeCategorySearchPagination: (pageNumber: number) =>
-    createAction(CHANGE_CATEGORY_SEARCH_PAGINATION, { pageNumber }),
+    createAction(CHANGE_RESULT_PAGINATION, { pageNumber }),
 };
 
 export const reducers = (
@@ -21,14 +22,14 @@ export const reducers = (
   action: ReturnType<typeof actionCreators[keyof typeof actionCreators]>
 ): WholeState["byCategorySearch"] => {
   switch (action.type) {
-    case CHANGE_CATEGORY_SEARCH_INPUT: {
+    case CHANGE_INPUT: {
       const { input } = action.payload;
       return {
         ...state,
         input,
       };
     }
-    case CHANGE_CATEGORY_SEARCH_PAGINATION: {
+    case CHANGE_RESULT_PAGINATION: {
       const { pageNumber } = action.payload;
       return {
         ...state,
@@ -45,6 +46,11 @@ export const reducers = (
 
 function getByCategorySearchInput(state: WholeState): ByCategorySearchInput {
   return state.byCategorySearch.input;
+}
+
+interface ByCategorySearchResult {
+  pagination: Pagination;
+  result: ContractAbstract[];
 }
 
 function getByCategorySearchResult(state: WholeState): ByCategorySearchResult {

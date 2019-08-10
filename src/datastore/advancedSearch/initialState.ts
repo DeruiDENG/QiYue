@@ -1,128 +1,96 @@
-import { ContractAbstract, TimePeriod, WholeState } from "../type";
+import { AdvancedContractAbstract, TimePeriod, WholeState } from "../type";
 
-const advancedSearchContractAbstract: { [key: number]: ContractAbstract[] } = {
-  1: [
-    {
-      id: 1,
-      name: "嘉庆十五年孝义县任永慎卖砖窑红契",
-      time: TimePeriod.Qing,
-      year: 1810,
-      location: "山西",
-    },
-    {
-      id: 2,
-      name: "道光二十三年霍州县王宗武卖房红契",
-      time: TimePeriod.Qing,
-      year: 1843,
-      location: "山西",
-    },
-    {
-      id: 3,
-      name: "同治五年凤台县张全武卖房红契",
-      time: TimePeriod.Qing,
-      year: 1866,
-      location: "山西",
-    },
-    {
-      id: 4,
-      name: "同治六年凤台县张全玉卖房红契",
-      time: TimePeriod.Qing,
-      year: 1867,
-      location: "山西",
-    },
-    {
-      id: 5,
-      name: "同治七年绥德县黑天锡卖窑白契",
-      time: TimePeriod.Qing,
-      year: 1868,
-      location: "陕西",
-    },
-    {
-      id: 6,
-      name: "同治九年绥德州郝大银卖窑红契",
-      time: TimePeriod.Qing,
-      year: 1870,
-      location: "陕西",
-    },
-    {
-      id: 7,
-      name: "同治十一年清涧县师鸿运卖坐宅红契",
-      time: TimePeriod.Qing,
-      year: 1872,
-      location: "陕西",
-    },
-    {
-      id: 8,
-      name: "光绪元年临汾县李门梁氏同子登云卖房红契",
-      time: TimePeriod.Qing,
-      year: 1875,
-      location: "山西",
-    },
-    {
-      id: 9,
-      name: "光绪四年绥德县李应士卖窑地白契",
-      time: TimePeriod.Qing,
-      year: 1878,
-      location: "陕西",
-    },
-    {
-      id: 10,
-      name: "光绪十七年凤台县张书枝卖房红契",
-      time: TimePeriod.Qing,
-      year: 1891,
-      location: "山西",
-    },
-  ],
-  2: [
-    {
-      id: 11,
-      name: "光绪二十年凤台县张永清卖厕坑红契",
-      time: TimePeriod.Qing,
-      year: 1894,
-      location: "山西",
-    },
-    {
-      id: 12,
-      name: "光绪二十九年葭州徐良有卖窑红契",
-      time: TimePeriod.Qing,
-      year: 1903,
-      location: "陕西",
-    },
-    {
-      id: 13,
-      name: "光绪三十三年绥德县黑应祥卖窑白契",
-      time: TimePeriod.Qing,
-      year: 1907,
-      location: "山西",
-    },
-    {
-      id: 14,
-      name: "光绪年间晋城县秦天池卖房红契附官契",
-      time: TimePeriod.Qing,
-      location: "山西",
-    },
-    {
-      id: 15,
-      name: "光绪年间高平县冯立荣卖房红契附官契",
-      time: TimePeriod.Qing,
-      location: "山西",
-    },
-    {
-      id: 16,
-      name: "民国六年绥德县李家坪李勤业卖窑白契",
-      time: TimePeriod.MinGuo,
-      year: 1917,
-      location: "陕西",
-    },
-    {
-      id: 17,
-      name: "嘉庆十五年孝义县任永慎卖砖窑红契",
-      time: TimePeriod.MinGuo,
-      year: 1933,
-      location: "山西",
-    },
-  ],
-};
+const advancedSearchContractAbstract: AdvancedContractAbstract[] = [
+  {
+    id: 1,
+    name: "嘉庆十五年孝义县任永慎卖砖窑红契",
+    time: TimePeriod.Qing,
+    year: 1810,
+    location: "山西",
+    sentences: ["今将自己分到之业东边上窑壹眼", "上厦窑壹眼", "大门外婆窑壹眼"],
+  },
+  {
+    id: 2,
+    name: "同治七年绥德县黑天锡卖窑白契",
+    time: TimePeriod.Qing,
+    year: 1868,
+    location: "陕西",
+    sentences: ["立出卖窑孔文约人黑天锡", "今将自己本身石窑上前边石窑一孔"],
+  },
+  {
+    id: 3,
+    name: "同治九年绥德州郝大银卖窑红契",
+    time: TimePeriod.Qing,
+    year: 1870,
+    location: "陕西",
+    sentences: [
+      "立卖窑孔文约人郝大银",
+      "今将自己原分到坐北向南正院一宅、土窑四孔",
+    ],
+  },
+  {
+    id: 4,
+    name: "同治十一年清涧县师鸿运卖坐宅红契",
+    time: TimePeriod.Qing,
+    year: 1872,
+    location: "陕西",
+    sentences: ["今将自己师家川坐东向西石窑三孔"],
+  },
+  {
+    id: 5,
+    name: "光绪四年绥德县李应士卖窑地白契",
+    time: TimePeriod.Qing,
+    year: 1878,
+    location: "陕西",
+    sentences: ["石窑二孔", "东西至窑腿为界"],
+  },
+  {
+    id: 6,
+    name: "光绪十一年王宾贤卖窑白契",
+    time: TimePeriod.Qing,
+    year: 1885,
+    sentences: [
+      "立死交石窑契约人王宾贤",
+      "今将自己应分到上院坐东向西面上面石窑一眼",
+    ],
+  },
+  {
+    id: 7,
+    name: "光绪二十九年葭州徐良有卖窑红契",
+    time: TimePeriod.Qing,
+    year: 1903,
+    location: "陕西",
+    sentences: ["立兑换窑文约人徐良有", "今将自己祖土窑叁孔"],
+  },
+  {
+    id: 8,
+    name: "光绪三十三年绥德县黑应祥卖窑白契",
+    time: TimePeriod.Qing,
+    year: 1907,
+    location: "陕西",
+    sentences: ["立出卖窑文约人黑应祥", "今将自己本身户内出卖产石窑叁孔"],
+  },
+  {
+    id: 9,
+    name: "民国六年绥德县李家坪李勤业卖窑白契",
+    time: TimePeriod.MinGuo,
+    year: 1917,
+    location: "陕西",
+    sentences: [
+      "立出卖窑孔文约人李勤业",
+      "今将自己本身石窑叁孔",
+      "前至李姓窑腿子为界",
+    ],
+  },
+  {
+    id: 10,
+    name: "民国二十二年山西史正荣卖窑院红契",
+    time: TimePeriod.MinGuo,
+    year: 1933,
+    location: "山西",
+    sentences: ["立卖窑院文字人史正荣", "今将自己祖遗老院窑口□座坑厕壹半"],
+  },
+];
 
 export const initialState: WholeState["advancedSearch"] = {
   input: {
@@ -145,6 +113,10 @@ export const initialState: WholeState["advancedSearch"] = {
     searchKeywordLogic: "connect",
     secondaryKeyWord: "",
   },
-  contents: {},
+  contents: advancedSearchContractAbstract,
   isContentLoading: false,
+  pagination: {
+    current: 1,
+    total: 21,
+  },
 };

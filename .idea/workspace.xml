@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea10346f-bd7d-4a6a-98a5-f6490473031c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/datastore/advancedSearch/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/datastore/byCategory/initialState.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/datastore/searchMode/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainContent/AdvancedSearchContent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainContent/AdvancedSearchContent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainContent/ByCategorySearchResult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainContent/ByCategorySearchResult.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panel/AdvancedSearchInputPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/AdvancedSearchInputPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panel/CategorySearchInputPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/CategorySearchInputPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panel/PanelContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel/PanelContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datastore/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/byCategory/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datastore/initialState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/advancedSearch/initialState.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datastore/saga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/byCategory/saga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/advancedSearch.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datastore/advancedSearch/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/advancedSearch/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datastore/advancedSearch/initialState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/advancedSearch/initialState.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datastore/byCategory/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/byCategory/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/datastore/type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datastore/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastore/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useSearchMode.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useSearchMode.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main-panel/MainCategoryButtons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main-panel/MainCategoryButtons.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +47,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.0" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/datastore/advancedSearch" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/datastore/byCategory/index.ts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -76,6 +69,10 @@
       <recent name="C:\Projects\qiyue\src\datastore\byCategory" />
       <recent name="C:\Projects\qiyue\src\Panel" />
       <recent name="C:\Projects\qiyue\src\shared\input" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="C:\Projects\qiyue\src\datastore\byCategory\index.ts" />
+      <recent name="C:\Projects\qiyue\src\datastore\advancedSearch\index.ts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Projects\qiyue\src\datastore\searchMode" />
@@ -129,7 +126,7 @@
       <workItem from="1565096565876" duration="9162000" />
       <workItem from="1565188496419" duration="5863000" />
       <workItem from="1565272811807" duration="3626000" />
-      <workItem from="1565402744584" duration="19859000" />
+      <workItem from="1565402744584" duration="24761000" />
     </task>
     <task id="LOCAL-00001" summary="Setup webpack project.">
       <created>1564884269299</created>
@@ -264,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565445701730</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Separate datastore into different reducers.">
+      <created>1565449388524</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1565449388524</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,6 +317,7 @@
     <MESSAGE value="Update prettier config" />
     <MESSAGE value="Add index for the category search result" />
     <MESSAGE value="Small change for the category search result" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small change for the category search result" />
+    <MESSAGE value="Separate datastore into different reducers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Separate datastore into different reducers." />
   </component>
 </project>

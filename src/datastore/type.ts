@@ -16,8 +16,9 @@ export interface WholeState {
   advancedSearch: {
     input: AdvancedSearchInput;
     savedInput: AdvancedSearchInput;
-    contents: { [key: number]: AdvancedContractAbstract[] };
+    contents: AdvancedContractAbstract[];
     isContentLoading: false;
+    pagination: Pagination;
   };
   byCategorySearch: {
     input: ByCategorySearchInput;
@@ -61,11 +62,7 @@ export interface AdvancedContractAbstract {
   name: string;
   time: TimePeriod;
   year?: number;
-  location: string;
+  location?: string;
   sentences: string[];
 }
 
-export interface ByCategorySearchResult {
-  pagination: Pagination;
-  result: ContractAbstract[];
-}
