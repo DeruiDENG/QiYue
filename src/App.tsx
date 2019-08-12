@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import { Col, Row } from "antd";
 import "./App.scss";
-import MainPanel from "./main-panel/MainPanel";
-import PanelContainer from "./Panel/PanelContainer";
+import MainPanel from "./CategoryCtaPanel/MainPanel";
+import PanelContainer from "./SearchInput/PanelContainer";
 import MainHeader from "./Header/MainHeader";
 import Footer from "./Footer/Footer";
-import MainContentContainer from "./MainContent/MainContentContainer";
+import MainContentContainer from "./SearchResult/MainContentContainer";
 
 const App: React.FC = () => {
   return (
