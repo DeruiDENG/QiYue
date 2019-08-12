@@ -1,10 +1,14 @@
-import React, { useCallback } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { selectors, actionCreators } from "../datastore/advancedSearch";
-import { Table } from "antd";
-import { PaginationConfig } from "antd/es/pagination";
+import React, {useCallback} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {selectors, actionCreators} from "../datastore/advancedSearch";
+import {Table} from "antd";
+import {PaginationConfig} from "antd/es/pagination";
+import ResultSentence from "./ResultSentence";
 
 const AdvancedSearchContent = () => {
+  const isContentLoading = useSelector(selectors.isContentLoading);
+  const resultHighlightRegex = useSelector(selectors.getInputHighlightRegex);
+
   const columns = [
     {
       title: "序号",
@@ -29,6 +33,7 @@ const AdvancedSearchContent = () => {
     {
       title: "例句",
       dataIndex: "sentence",
+      render: sentence => <ResultSentence sentence={sentence} highlightRegex={resultHighlightRegex}/>
     },
   ];
 
@@ -36,23 +41,23 @@ const AdvancedSearchContent = () => {
   const onChange = useCallback((pagination: PaginationConfig) => {
     dispatch(actionCreators.changeCategorySearchPagination(pagination.current));
   }, []);
-  const { result: contracts, pagination } = useSelector(
-    selectors.getAdvancedSearchResult
+  const {result: contracts, pagination} = useSelector(
+      selectors.getAdvancedSearchResult
   );
-  const isContentLoading = useSelector(selectors.isContentLoading);
+
 
   return (
-    <Table
-      columns={columns}
-      rowKey={contract => String(contract.key)}
-      dataSource={contracts}
-      pagination={{
-        ...pagination,
-        showTotal: (total: number) => `共${total}条数据`,
-      }}
-      loading={isContentLoading}
-      onChange={onChange}
-    />
+      <Table
+          columns={columns}
+          rowKey={contract => String(contract.key)}
+          dataSource={contracts}
+          pagination={{
+            ...pagination,
+            showTotal: (total: number) => `共${total}条数据`,
+          }}
+          loading={isContentLoading}
+          onChange={onChange}
+      />
   );
 };
 
