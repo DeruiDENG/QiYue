@@ -20,7 +20,7 @@ const CategorySearchInputPanel = () => {
     },
     {
       mainCategory: "商业类文书",
-      subCategories: ["结社合同", "揭借合同", "银钱", "账册"],
+      subCategories: ["结社合同", "揭借合同", "银钱账册"],
     },
     {
       mainCategory: "家族文书",

@@ -1,11 +1,7 @@
-import React, { useCallback, Fragment } from "react";
+import React, { Fragment, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  selectors,
-  actionCreators,
-  AdvancedSearchContract,
-} from "../datastore/advancedSearch";
-import { Table } from "antd";
+import { actionCreators, selectors } from "../datastore/advancedSearch";
+import { Button, Table } from "antd";
 import { PaginationConfig } from "antd/es/pagination";
 import ResultSentence from "./ResultSentence";
 import ArticleDetailsDialog from "./ArticleDetails/ArticleDetailsDialog";
@@ -13,6 +9,13 @@ import ArticleDetailsDialog from "./ArticleDetails/ArticleDetailsDialog";
 const AdvancedSearchContent = () => {
   const isContentLoading = useSelector(selectors.isContentLoading);
   const resultHighlightRegex = useSelector(selectors.getInputHighlightRegex);
+  const dispatch = useDispatch();
+  const onChange = useCallback((pagination: PaginationConfig) => {
+    dispatch(actionCreators.changeCategorySearchPagination(pagination.current));
+  }, []);
+  const { result: contracts, pagination } = useSelector(
+    selectors.getAdvancedSearchResult
+  );
 
   const columns = [
     {
@@ -45,15 +48,21 @@ const AdvancedSearchContent = () => {
         />
       ),
     },
+    {
+      title: "操作",
+      dataIndex: "id",
+      render: id => (
+        <Button
+          icon="search"
+          onClick={() => {
+            dispatch(actionCreators.showArticleDetails(id));
+          }}
+        >
+          打开详情
+        </Button>
+      ),
+    },
   ];
-
-  const dispatch = useDispatch();
-  const onChange = useCallback((pagination: PaginationConfig) => {
-    dispatch(actionCreators.changeCategorySearchPagination(pagination.current));
-  }, []);
-  const { result: contracts, pagination } = useSelector(
-    selectors.getAdvancedSearchResult
-  );
 
   return (
     <Fragment>
@@ -67,13 +76,6 @@ const AdvancedSearchContent = () => {
         }}
         loading={isContentLoading}
         onChange={onChange}
-        onRow={(record: AdvancedSearchContract) => {
-          return {
-            onClick: () => {
-              dispatch(actionCreators.showArticleDetails(record.id));
-            },
-          };
-        }}
       />
       <ArticleDetailsDialog />
     </Fragment>

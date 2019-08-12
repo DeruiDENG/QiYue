@@ -9,6 +9,7 @@ import { useSearchMode } from "../../hooks/useSearchMode";
 interface Category {
   displayText: string;
   type: SearchMode;
+  disabled?: boolean;
 }
 
 const MainCategoryButtons = () => {
@@ -18,12 +19,13 @@ const MainCategoryButtons = () => {
       type: SearchMode.ByCategory,
     },
     {
-      displayText: "全文检索",
-      type: SearchMode.FullText,
-    },
-    {
       displayText: "高级检索",
       type: SearchMode.Advanced,
+    },
+    {
+      displayText: "全文检索",
+      type: SearchMode.FullText,
+      disabled: true,
     },
   ];
 
@@ -36,7 +38,7 @@ const MainCategoryButtons = () => {
   return (
     <div className="main-category-buttons">
       {categories.map(category => {
-        const { type, displayText } = category;
+        const { type, displayText, disabled } = category;
         const isSelected = type === searchMode;
         return (
           <div key={type} className="main-category-buttons__item">
@@ -45,6 +47,7 @@ const MainCategoryButtons = () => {
               onClick={() => {
                 switchCategory(type);
               }}
+              disabled={disabled}
             >
               {displayText}
             </Button>
