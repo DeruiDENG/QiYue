@@ -13,11 +13,11 @@ const App: React.FC = () => {
       <MainHeader />
       <div className="body-wrapper">
         <MainPanel />
-        <Row gutter={24} style={{ marginBottom: "32px" }}>
-          <Col span={3}>
+        <Row gutter={24} type="flex" style={{ marginBottom: "32px" }}>
+          <Col span={10} md={8} xl={6}>
             <PanelContainer />
           </Col>
-          <Col span={18}>
+          <Col span={15}>
             <MainContentContainer />
           </Col>
         </Row>
