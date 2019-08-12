@@ -8,7 +8,7 @@ interface Props {
   highlightRegex: RegExp
 }
 
-const ResultSentence = (props: Props ) => {
+const ResultSentence = (props: Props) => {
   const {highlightRegex, sentence} = props;
   const words = sentence.split(highlightRegex);
   return (

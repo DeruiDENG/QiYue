@@ -13,7 +13,7 @@ const App: React.FC = () => {
       <MainHeader />
       <div className="body-wrapper">
         <MainPanel />
-        <Row gutter={24} type="flex" style={{ marginBottom: "32px" }}>
+        <Row gutter={24} type="flex" justify="center" style={{ marginBottom: "32px" }}>
           <Col span={10} md={8} xl={6}>
             <PanelContainer />
           </Col>
