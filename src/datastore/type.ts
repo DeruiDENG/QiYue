@@ -19,6 +19,10 @@ export interface WholeState {
     contents: AdvancedContractAbstract[];
     isContentLoading: false;
     pagination: Pagination;
+    articleDetails: {
+      isPopup: boolean;
+      articleId: string;
+    };
   };
   byCategorySearch: {
     input: ByCategorySearchInput;
@@ -58,11 +62,10 @@ export interface ContractAbstract {
 }
 
 export interface AdvancedContractAbstract {
-  id: number;
+  id: string;
   name: string;
   time: TimePeriod;
   year?: number;
   location?: string;
   sentences: string[];
 }
-

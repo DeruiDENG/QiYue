@@ -14,7 +14,7 @@ const App: React.FC = () => {
       <div className="body-wrapper">
         <MainPanel />
         <Row gutter={24} type="flex" justify="center" style={{ marginBottom: "32px" }}>
-          <Col span={10} md={8} xl={6}>
+          <Col span={10} md={8} xl={4}>
             <PanelContainer />
           </Col>
           <Col span={15}>

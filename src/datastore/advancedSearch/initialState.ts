@@ -2,7 +2,7 @@ import { AdvancedContractAbstract, TimePeriod, WholeState } from "../type";
 
 const advancedSearchContractAbstract: AdvancedContractAbstract[] = [
   {
-    id: 1,
+    id: '1',
     name: "嘉庆十五年孝义县任永慎卖砖窑红契",
     time: TimePeriod.Qing,
     year: 1810,
@@ -10,7 +10,7 @@ const advancedSearchContractAbstract: AdvancedContractAbstract[] = [
     sentences: ["今将自己分到之业东边上窑壹眼", "上厦窑壹眼", "大门外婆窑壹眼"],
   },
   {
-    id: 2,
+    id: '2',
     name: "同治七年绥德县黑天锡卖窑白契",
     time: TimePeriod.Qing,
     year: 1868,
@@ -18,7 +18,7 @@ const advancedSearchContractAbstract: AdvancedContractAbstract[] = [
     sentences: ["立出卖窑孔文约人黑天锡", "今将自己本身石窑上前边石窑一孔"],
   },
   {
-    id: 3,
+    id: '3',
     name: "同治九年绥德州郝大银卖窑红契",
     time: TimePeriod.Qing,
     year: 1870,
@@ -29,7 +29,7 @@ const advancedSearchContractAbstract: AdvancedContractAbstract[] = [
     ],
   },
   {
-    id: 4,
+    id: '4',
     name: "同治十一年清涧县师鸿运卖坐宅红契",
     time: TimePeriod.Qing,
     year: 1872,
@@ -37,7 +37,7 @@ const advancedSearchContractAbstract: AdvancedContractAbstract[] = [
     sentences: ["今将自己师家川坐东向西石窑三孔"],
   },
   {
-    id: 5,
+    id: '5',
     name: "光绪四年绥德县李应士卖窑地白契",
     time: TimePeriod.Qing,
     year: 1878,
@@ -45,7 +45,7 @@ const advancedSearchContractAbstract: AdvancedContractAbstract[] = [
     sentences: ["石窑二孔", "东西至窑腿为界"],
   },
   {
-    id: 6,
+    id: '6',
     name: "光绪十一年王宾贤卖窑白契",
     time: TimePeriod.Qing,
     year: 1885,
@@ -55,7 +55,7 @@ const advancedSearchContractAbstract: AdvancedContractAbstract[] = [
     ],
   },
   {
-    id: 7,
+    id: '7',
     name: "光绪二十九年葭州徐良有卖窑红契",
     time: TimePeriod.Qing,
     year: 1903,
@@ -63,7 +63,7 @@ const advancedSearchContractAbstract: AdvancedContractAbstract[] = [
     sentences: ["立兑换窑文约人徐良有", "今将自己祖土窑叁孔"],
   },
   {
-    id: 8,
+    id: '8',
     name: "光绪三十三年绥德县黑应祥卖窑白契",
     time: TimePeriod.Qing,
     year: 1907,
@@ -71,7 +71,7 @@ const advancedSearchContractAbstract: AdvancedContractAbstract[] = [
     sentences: ["立出卖窑文约人黑应祥", "今将自己本身户内出卖产石窑叁孔"],
   },
   {
-    id: 9,
+    id: '9',
     name: "民国六年绥德县李家坪李勤业卖窑白契",
     time: TimePeriod.MinGuo,
     year: 1917,
@@ -83,7 +83,7 @@ const advancedSearchContractAbstract: AdvancedContractAbstract[] = [
     ],
   },
   {
-    id: 10,
+    id: '10',
     name: "民国二十二年山西史正荣卖窑院红契",
     time: TimePeriod.MinGuo,
     year: 1933,
@@ -118,5 +118,9 @@ export const initialState: WholeState["advancedSearch"] = {
   pagination: {
     current: 1,
     total: 21,
+  },
+  articleDetails: {
+    isPopup: false,
+    articleId: "",
   },
 };
