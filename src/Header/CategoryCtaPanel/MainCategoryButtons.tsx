@@ -1,10 +1,10 @@
 import React, { useCallback } from "react";
 import { Button } from "antd";
 import "./mainCategoryButtons.scss";
-import { actionCreators } from "../datastore/searchMode";
+import { actionCreators } from "../../datastore/searchMode";
 import { useDispatch } from "react-redux";
-import { SearchMode } from "../datastore/type";
-import { useSearchMode } from "../hooks/useSearchMode";
+import { SearchMode } from "../../datastore/type";
+import { useSearchMode } from "../../hooks/useSearchMode";
 
 interface Category {
   displayText: string;

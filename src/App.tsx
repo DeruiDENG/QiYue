@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import { Col, Row } from "antd";
 import "./App.scss";
-import MainPanel from "./CategoryCtaPanel/MainPanel";
 import PanelContainer from "./SearchInput/PanelContainer";
 import MainHeader from "./Header/MainHeader";
 import Footer from "./Footer/Footer";
@@ -12,8 +11,7 @@ const App: React.FC = () => {
     <Fragment>
       <MainHeader />
       <div className="body-wrapper">
-        <MainPanel />
-        <Row gutter={24} type="flex" justify="center" style={{ marginBottom: "32px" }}>
+        <Row gutter={24} type="flex" justify="center" style={{ marginBottom: "32px", paddingTop: "16px", paddingBottom:"16px" }}>
           <Col span={10} md={8} xl={4}>
             <PanelContainer />
           </Col>

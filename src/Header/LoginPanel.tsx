@@ -15,9 +15,6 @@ const LoginPanel = ({isUserLoggedIn}: Props) => (
           {isUserLoggedIn ? <a className="login-panel__link" href="#">用户登出</a> : <a href="#">用户登录</a>}
         </div>
       </div>
-      <div className="copyright">
-        陕西师范大学黑维强教授版权所有
-      </div>
     </div>
 );
 
