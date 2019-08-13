@@ -1,7 +1,7 @@
 import React, { Fragment, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { actionCreators, selectors } from "../datastore/advancedSearch";
-import { Button, Table } from "antd";
+import { Button, Table, Col } from "antd";
 import { PaginationConfig } from "antd/es/pagination";
 import ResultSentence from "./ResultSentence";
 import ArticleDetailsDialog from "./ArticleDetails/ArticleDetailsDialog";
@@ -52,14 +52,26 @@ const AdvancedSearchContent = () => {
       title: "操作",
       dataIndex: "id",
       render: id => (
-        <Button
-          icon="search"
-          onClick={() => {
-            dispatch(actionCreators.showArticleDetails(id));
-          }}
-        >
-          打开详情
-        </Button>
+        <React.Fragment>
+          <Col span={0} md={24}>
+            <Button
+              icon="search"
+              onClick={() => {
+                dispatch(actionCreators.showArticleDetails(id));
+              }}
+            >
+              打开详情
+            </Button>
+          </Col>
+          <Col span={24} md={0}>
+            <Button
+              icon="search"
+              onClick={() => {
+                dispatch(actionCreators.showArticleDetails(id));
+              }}
+            />
+          </Col>
+        </React.Fragment>
       ),
     },
   ];

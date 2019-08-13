@@ -12,13 +12,13 @@ const ArticleDetailsContent = (props: Props) => {
   const { articleDetails } = props;
   return (
     <Row>
-      <Col span={16}>
+      <Col span={24} md={16}>
         <Title level={4}>{articleDetails.title}<Button size="small" style={{marginLeft: "16px"}}>复制文字</Button></Title>
         {articleDetails.content.map((para, index) => (
           <Paragraph key={index}>{para}</Paragraph>
         ))}
       </Col>
-      <Col span={8}>Images</Col>
+      <Col span={16} md={8}>Images</Col>
     </Row>
   );
 };
