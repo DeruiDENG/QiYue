@@ -22,10 +22,10 @@ const App: React.FC = () => {
             paddingBottom: "16px",
           }}
         >
-          <Col span={10} md={8} xl={4}>
+          <Col span={24} md={8} xl={4}>
             <PanelContainer />
           </Col>
-          <Col span={15}>
+          <Col span={24} md={15}>
             <MainContentContainer />
           </Col>
         </Row>
