@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useCallback } from "react";
-import { Button, Checkbox, Form, Input, Radio, Select, Col } from "antd";
+import { Button, Checkbox, Form, Input, Radio, Select, Col, Row } from "antd";
 import panelImage from "./panel-image-min.jpg";
 import PanelImage from "./PanelImage";
 import "./panelForm.scss";
@@ -48,10 +48,15 @@ const AdvancedSearchInputPanel = () => {
 
   return (
     <div className="advanced-panel">
-      <Col span={0} md={24}>
-        <PanelImage url={panelImage} alt="高级搜索栏图片" />
-      </Col>
-      <Form {...formItemLayout} style={{paddingLeft: "12px", paddingRight: "12px"}}>
+      <Row>
+        <Col span={0} md={24}>
+          <PanelImage url={panelImage} alt="高级搜索栏图片" />
+        </Col>
+      </Row>
+      <Form
+        {...formItemLayout}
+        style={{ paddingLeft: "12px", paddingRight: "12px" }}
+      >
         <Form.Item label="检索字词" style={formItemStyle}>
           <Input
             value={searchKeyword}

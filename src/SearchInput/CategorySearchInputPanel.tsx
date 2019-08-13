@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import {Col, Tree} from "antd";
+import { Col, Row, Tree } from "antd";
 import "./panelForm.scss";
 import PanelImage from "./PanelImage";
 import panelImage from "./panel-image-min.jpg";
@@ -50,9 +50,11 @@ const CategorySearchInputPanel = () => {
 
   return (
     <React.Fragment>
-      <Col span={0} md={24}>
-        <PanelImage url={panelImage} alt="高级搜索栏图片" />
-      </Col>
+      <Row>
+        <Col span={0} md={24}>
+          <PanelImage url={panelImage} alt="高级搜索栏图片" />
+        </Col>
+      </Row>
       <DirectoryTree
         multiple
         defaultExpandAll
