@@ -1,3 +1,4 @@
+import "./polyfill.ts";
 import React, { Fragment } from "react";
 import { Col, Row } from "antd";
 import "./App.scss";
@@ -11,7 +12,16 @@ const App: React.FC = () => {
     <Fragment>
       <MainHeader />
       <div className="body-wrapper">
-        <Row gutter={24} type="flex" justify="center" style={{ marginBottom: "32px", paddingTop: "16px", paddingBottom:"16px" }}>
+        <Row
+          gutter={24}
+          type="flex"
+          justify="center"
+          style={{
+            marginBottom: "32px",
+            paddingTop: "16px",
+            paddingBottom: "16px",
+          }}
+        >
           <Col span={10} md={8} xl={4}>
             <PanelContainer />
           </Col>
